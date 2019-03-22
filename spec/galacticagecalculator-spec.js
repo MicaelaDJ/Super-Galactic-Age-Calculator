@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
-import Date from "./../src/galacticagecalculator";
-import Earth from "./../src/galacticagecalculator";
+import Date, Earth from "./../src/galacticagecalculator";
 
 describe('Date', function() {
   it('should test to see if its a leap year', function() {
