@@ -1,32 +1,27 @@
 /* eslint-disable no-unused-vars */
-export default class Date {
-  constructor(year, month, day, countDays) {
+export default class PlanetYears {
+  constructor(year) {
     this.year = year;
-    this.month = month;
-    this.day = day;
-    this.countDays = countDays
   }
-  leapYear(year, month, day, countDays) {
-    const leapYearYes = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    const leapYearNo = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    for(let i = 0; i <= this.year-1; i++){
-      if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
-        countDays+=366;
-      } else {
-        countDays+=365;
-      }
+
+  calculateYears(age, lifeExpectancy, extraYears, planetYear) {
+    let remainder;
+    const remainingLife = Math.floor((lifeExpectancy - age) / planetYear);
+    const inputAge = Math.floor(age / planetYear);
+    if (extraYears !== 0) {
+      remainder = Math.floor(extraYears / planetYear);
     }
-    for(let i = 0; i <= this.month-1; i++){
-      if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
-        countDays+=leapYearYes[i];
-      } else {
-        countDays+=leapYearNo[i];
-      }
+    else {
+      remainder = "You still have some years left."
     }
-    for(let i = 0; i <= this.day-1; i++){
-      countDays += 1;
-    }
-    return countDays;
+    const arr = [inputAge, remainingLife, remainder];
+    return arr;
+  }
+}
+
+export class Earth extends PlanetYears {
+  constructor() {
+    super(1);
   }
 }
 /* eslint-disable no-unused-vars */
