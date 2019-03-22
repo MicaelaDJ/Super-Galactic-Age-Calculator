@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-export default class PlanetYears {
+export default class GalacticAge {
   constructor(year) {
     this.year = year;
   }
@@ -19,7 +19,7 @@ export default class PlanetYears {
   }
 }
 
-export class Earth extends PlanetYears {
+export class Earth extends GalacticAge {
   constructor() {
     super(1);
   }
