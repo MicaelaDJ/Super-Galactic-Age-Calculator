@@ -10,7 +10,7 @@
     "lint": "eslint src/*.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Micaela Jawor",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.3.1",
@@ -42,6 +42,14 @@
     "url-loader": "^1.1.2",
     "webpack": "^4.0.1",
     "webpack-cli": "^2.0.9",
-    "webpack-dev-server": "^3.1.0"
-  }
+    "webpack-dev-server": "^3.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MicaelaDJ/Super-Galactic-Age-Calculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MicaelaDJ/Super-Galactic-Age-Calculator/issues"
+  },
+  "homepage": "https://github.com/MicaelaDJ/Super-Galactic-Age-Calculator#readme"
 }
