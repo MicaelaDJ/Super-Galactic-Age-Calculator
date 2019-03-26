@@ -8,3 +8,10 @@ describe ('Earth', function() {
     expect(earth.remainder).toEqual('You still have some years left.');
   });
 });
+
+describe('Age', function() {
+  it('returns the age of the user and remaining life expectancy in Earth years', function() {
+    const earth = new Earth();
+    
+  });
+});

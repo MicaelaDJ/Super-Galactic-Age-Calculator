@@ -4,8 +4,7 @@ export function Earth(inputAge, lifeExpectancy, remainder) {
   this.remainder = remainder;
 }
 
-// /* eslint-disable no-unused-vars */
-// export default class GalacticAge {
+// export class Age {
 //   constructor(year) {
 //     this.year = year;
 //   }
@@ -25,9 +24,8 @@ export function Earth(inputAge, lifeExpectancy, remainder) {
 //   }
 // }
 //
-// export class Earth extends GalacticAge {
+// export class Earth extends Age {
 //   constructor() {
 //     super(1);
 //   }
 // }
-// /* eslint-disable no-unused-vars */
