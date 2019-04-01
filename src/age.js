@@ -6,11 +6,11 @@ export default class Calculator {
 export default class AgeCalculator {
   constructor() {
     this.planets = ["earth", "mercury", "venus", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto"];
-    this.ageFactors = [20, 83.33, 31.25, 10.64, 1.69, .69, .24, .12, .];
-    this.lifeExpectancies = [78, 325.26, 125.58, 41.34, 6.55];
+    this.ageFactors = [1, 4.16, 1.56, 0.53, 0.08, 0.03, 0.01, 0.006, 0.004];
+    this.lifeExpectancies = [72, 83.33, 31.25, 10.64, 1.69, 0.69, 0.24, 0.12, 0.08];
   }
 
-  calculateAge(earthAge, planet) {
+  calculateAge(age, planet) {
     let planetIndex = this.getPlanetIndex(planet);
     let ageFactor = this.ageFactors[planetIndex];
     let ageOnPlanet = parseFloat(earthAge) * parseFloat(ageFactor);
@@ -18,7 +18,7 @@ export default class AgeCalculator {
     return ageOnPlanet;
   }
 
-  calculateLifeYearRemaining(earthAge, planet, lifestyleFactors) {
+  calculateLifeYearRemaining(age, planet, lifestyleFactors) {
     let ageOnPlanet = this.calculateAge(earthAge, planet);
     let lifeExpectancyOnPlanet = this.getLifeExpectancy(planet);
     if (lifestyleFactors && lifestyleFactors.length > 0) {
@@ -74,42 +74,3 @@ export default class AgeCalculator {
     return planetIndex;
   }
 }
-// export function Earth(inputAge, lifeExpectancy, remainder) {
-//   this.inputAge = inputAge;
-//   this.lifeExpectancy = lifeExpectancy;
-//   this.remainder = remainder;
-// }
-//
-// export class Date {
-//   constructor(year, month, day, countDays) {
-//     this.year = year;
-//     this.month = month;
-//     this.day = day;
-//     this.countDays = countDays;
-//   }
-//   year(year, month, day, countDays) {
-//     const leapYearNo = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-//     const leapYearYes = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-//     for (let i = 0; i <= this.year; i++) {
-//       if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
-//         countDays+=366;
-//       } else {
-//         countDays+=365;
-//       }
-//     }
-//     for(let i=0; i <= this.month-1; i++) {
-//       if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
-//         countDays+=leapYearYes[i];
-//       } else {
-//         countDays+=leapYearNo[i];
-//       }
-//     }
-//     for(let i = 0; i <= this.day-1; i++) {
-//       countDays +=1;
-//     }
-//     return countDays;
-//   }
-//   resetDays() {
-//     this.countDays = 0;
-//   }
-// }
