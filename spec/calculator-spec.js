@@ -1,13 +1,13 @@
-import { Calculator } from './../src/age.js';
+import Calculator from './../src/calculator.js';
 
 describe('Calculator', function() {
 
 //Earth
   it('should return the correct age for Earth', function () {
-    let calculator = new Calculator();
-    let planet = 'earth';
-    let age = 20;
-    expect(calculator.doTheMath(age, planet)).toEqual(20);
+    var calculator = new Calculator();
+    var planet = 'earth';
+    var age = 20;
+    expect (calculator.doTheMath(age, planet)).toEqual(20);
   });
   it('should return the correct life expectancy for Earth', function() {
     let calculator = new Calculator();
@@ -17,14 +17,14 @@ describe('Calculator', function() {
   it('should return the life remaining for Earth', function() {
     let calculator = new Calculator();
     let planet = 'earth';
-    let age = 20;
-    expect(calculator.remaining(age, planet)).toEqual(52)
+    let currentAge = 20;
+    expect(calculator.remaining(currentAge, planet)).toEqual(52)
   });
   it('should return the number of years a person has lived past their life expectancy on Earth', function() {
     let calculator = new Calculator();
     let planet = 'earth';
-    let age = 100;
-    expect(calculator.remaining(age, planet)).toEqual(Math.abs(-28));
+    let currentAge = 100;
+    expect(calculator.remaining(currentAge, planet)).toEqual(-28);
   });
 
 //Mercury
@@ -42,14 +42,14 @@ describe('Calculator', function() {
   it('should return the life remaining for Mercury', function() {
     let calculator = new Calculator();
     let planet = 'mercury';
-    let age = 20;
-    expect(calculator.remaining(age, planet)).toEqual(216.67)
+    let currentAge = 20;
+    expect(calculator.remaining(currentAge, planet)).toEqual(216.67)
   });
   it('should return the number of years a person has lived past their life expectancy on Mercury', function() {
     let calculator = new Calculator();
     let planet = 'mercury';
-    let age = 100;
-    expect(calculator.remaining(age, planet)).toEqual(Math.abs(-116.67));
+    let currentAge = 100;
+    expect(calculator.remaining(currentAge, planet)).toEqual(-116.67);
   });
 
 //Venus
@@ -67,14 +67,14 @@ describe('Calculator', function() {
   it('should return the life remaining for Venus', function() {
     let calculator = new Calculator();
     let planet = 'venus';
-    let age = 20;
-    expect(calculator.remaining(age, planet)).toEqual(81.25)
+    let currentAge = 20;
+    expect(calculator.remaining(currentAge, planet)).toEqual(81.25)
   });
   it('should return the number of years a person has lived past their life expectancy on Venus', function() {
     let calculator = new Calculator();
     let planet = 'venus';
-    let age = 100;
-    expect(calculator.remaining(age, planet)).toEqual(Math.abs(-43.75));
+    let currentAge = 100;
+    expect(calculator.remaining(currentAge, planet)).toEqual(-43.75);
   });
 
 //Mars
@@ -92,14 +92,14 @@ describe('Calculator', function() {
   it('should return the life remaining for Mars', function() {
     let calculator = new Calculator();
     let planet = 'mars';
-    let age = 20;
-    expect(calculator.remaining(age, planet)).toEqual(27.66)
+    let currentAge = 20;
+    expect(calculator.remaining(currentAge, planet)).toEqual(27.66)
   });
   it('should return the number of years a person has lived past their life expectancy on Mars', function() {
     let calculator = new Calculator();
     let planet = 'mars';
-    let age = 100;
-    expect(calculator.remaining(age, planet)).toEqual(Math.abs(-14.89));
+    let currentAge = 100;
+    expect(calculator.remaining(currentAge, planet)).toEqual(-14.89);
   });
 
 //Jupiter
@@ -117,14 +117,14 @@ describe('Calculator', function() {
   it('should return the life remaining for Jupiter', function() {
     let calculator = new Calculator();
     let planet = 'jupiter';
-    let age = 20;
-    expect(calculator.remaining(age, planet)).toEqual(4.38)
+    let currentAge = 20;
+    expect(calculator.remaining(currentAge, planet)).toEqual(4.38)
   });
   it('should return the number of years a person has lived past their life expectancy on Jupiter', function() {
     let calculator = new Calculator();
     let planet = 'jupiter';
-    let age = 100;
-    expect(calculator.remaining(age, planet)).toEqual(Math.abs(-2.36));
+    let currentAge = 100;
+    expect(calculator.remaining(currentAge, planet)).toEqual(-2.36);
   });
 
 //Saturn
@@ -132,7 +132,7 @@ describe('Calculator', function() {
     let calculator = new Calculator();
     let planet = 'saturn';
     let age = 20;
-    expect(calculator.doTheMath(age, planet)).toEqual(.69);
+    expect(calculator.doTheMath(age, planet)).toEqual(.68);
   });
   it('should return the correct life expectancy for Saturn', function() {
     let calculator = new Calculator();
@@ -142,17 +142,17 @@ describe('Calculator', function() {
   it('should return the life remaining for Saturn', function() {
     let calculator = new Calculator();
     let planet = 'saturn';
-    let age = 20;
-    expect(calculator.remaining(age, planet)).toEqual(1.75)
+    let currentAge = 20;
+    expect(calculator.remaining(currentAge, planet)).toEqual(1.76)
   });
   it('should return the number of years a person has lived past their life expectancy on Saturn', function() {
     let calculator = new Calculator();
     let planet = 'saturn';
-    let age = 100;
-    expect(calculator.remaining(age, planet)).toEqual(Math.abs(-.95));
+    let currentAge = 100;
+    expect(calculator.remaining(currentAge, planet)).toEqual(-.95);
   });
 
-//Uranus
+// // //Uranus
   it('should return the correct age for Uranus', function () {
     let calculator = new Calculator();
     let planet = 'uranus';
@@ -167,14 +167,14 @@ describe('Calculator', function() {
   it('should return the life remaining for Uranus', function() {
     let calculator = new Calculator();
     let planet = 'uranus';
-    let age = 20;
-    expect(calculator.remaining(age, planet)).toEqual(.62)
+    let currentAge = 20;
+    expect(calculator.remaining(currentAge, planet)).toEqual(.62)
   });
   it('should return the number of years a person has lived past their life expectancy on Uranus', function() {
     let calculator = new Calculator();
     let planet = 'uranus';
-    let age = 100;
-    expect(calculator.remaining(age, planet)).toEqual(Math.abs(-.33));
+    let currentAge = 100;
+    expect(calculator.remaining(currentAge, planet)).toEqual(-.33);
   });
 
 //Neptune
@@ -184,7 +184,7 @@ describe('Calculator', function() {
     let age = 20;
     expect(calculator.doTheMath(age, planet)).toEqual(.12);
   });
-  it('should return the correct life expectancy for Neptune', function() {
+it('should return the correct life expectancy for Neptune', function() {
     let calculator = new Calculator();
     let planet = 'neptune';
     expect(calculator.lifeExpectancy(planet)).toEqual(.44)
@@ -192,14 +192,14 @@ describe('Calculator', function() {
   it('should return the life remaining for Neptune', function() {
     let calculator = new Calculator();
     let planet = 'neptune';
-    let age = 20;
-    expect(calculator.remaining(age, planet)).toEqual(.32)
+    let currentAge = 20;
+    expect(calculator.remaining(currentAge, planet)).toEqual(.32)
   });
   it('should return the number of years a person has lived past their life expectancy on Neptune', function() {
     let calculator = new Calculator();
     let planet = 'neptune';
-    let age = 100;
-    expect(calculator.remaining(age, planet)).toEqual(Math.abs(-.17));
+    let currentAge = 100;
+    expect(calculator.remaining(currentAge, planet)).toEqual(-.17);
   });
 
 //Pluto
@@ -217,13 +217,13 @@ describe('Calculator', function() {
   it('should return the life remaining for Pluto(because we should appreciate all Disney characters)', function() {
     let calculator = new Calculator();
     let planet = 'pluto';
-    let age = 20;
-    expect(calculator.remaining(age, planet)).toEqual(.21)
+    let currentAge = 20;
+    expect(calculator.remaining(currentAge, planet)).toEqual(.21)
   });
   it('should return the number of years a person has lived past their life expectancy on Pluto(because I like pluto)', function() {
     let calculator = new Calculator();
     let planet = 'pluto';
-    let age = 100;
-    expect(calculator.remaining(age, planet)).toEqual(Math.abs(-.11));
+    let currentAge = 100;
+    expect(calculator.remaining(currentAge, planet)).toEqual(-.11);
   });
 });
